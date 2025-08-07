@@ -3,7 +3,7 @@ from Birthday import Birthday
 
 class Person:
 
-    def __init__(self, first_name, last_name):
+    def __init__(self, first_name, last_name, mailing):
         """A person is defined by a first and last name, a birthday in the
         form (month, day), and a city they live in. Additional fields may
         be added here later. A new object requires only a first and last
@@ -11,6 +11,7 @@ class Person:
         the corresponding mutator methods."""
         self.first_name = first_name
         self.last_name = last_name
+        self.mailing = mailing
         self.birthday = None
         self.email_address = None
         self.nickname = None
@@ -37,6 +38,9 @@ class Person:
     def get_first_name(self):
         """Accessor for first name"""
         return self.first_name
+    
+    def get_mailing_name(self):
+        return self.first_name
 
     def get_last_name(self):
         """Accessor for last name"""
@@ -45,3 +49,4 @@ class Person:
     def __str__(self):
         """String representation for the object"""
         return f"[ {self.first_name} {self.last_name}]"
+    

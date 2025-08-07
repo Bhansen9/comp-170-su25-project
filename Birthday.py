@@ -8,6 +8,11 @@ class Birthday:
     days_in_month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
     def __init__(self, month, day):
+        self.month = month
+        self.day = day
+
+
+
         """Basic constructor. It validates the arguments past to it
         and if they are out of range, it assigns a default value of
         January 1."""
@@ -63,9 +68,3 @@ class Birthday:
     def __str__(self):
         """String representation for the object"""
         return f"[ {self.get_month()}/{self.get_day()} ]"
-
-
-demo = Birthday(6, 29)
-
-print(demo.day_in_year(6, 29))  # d_b
-print(demo.day_in_year(4, 29))  # d_t
