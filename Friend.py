@@ -1,7 +1,7 @@
 from Birthday import Birthday
 
 
-class Person:
+class Friend:
 
     def __init__(self, first_name, last_name, mailing):
         """A person is defined by a first and last name, a birthday in the
@@ -30,6 +30,13 @@ class Person:
     def set_birthday(self, month, day):
         """Mutator for birthday. Uses our very own Birthday class."""
         self._birthday = Birthday(month, day)
+
+    def full_name(self):
+        return f"{self.first_name} {self.last_name}"
+    
+    
+    def mailing_address(self):
+        return f"{self.mailing}"
 
     def set_city(self, city):
         """Mutator for city."""

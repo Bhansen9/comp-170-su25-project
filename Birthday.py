@@ -55,7 +55,18 @@ class Birthday:
         # subtract from birthday
         # return # of days
         today = datetime.today()
-        # COMPLETE THIS FOR YOUR ASSIGNMENT
+        #find the days count for the data just collected
+        count_Today = 0
+        for i in range(today.month-1):
+            count_Today += Birthday.days_in_month[i]
+        count_Today += today.day
+# find the days count for the birthday in question
+        count_Target = 0
+        for i in range(self.__month-1):
+            count_Target += Birthday.days_in_month[i]
+        count_Target += self.__day
+#return the right count and how many days are remaining
+        return count_Target - count_Today if count_Target >= count_Today else 365 + (count_Target - count_Today)
 
     def day_in_year(self, month, day):
         """calculates the day number within the year corresponding to a given
