@@ -97,7 +97,7 @@ def search_friend(friends, name):
 
 def save_friends(friends):
     #opens the database in write mode so the create_friend() data saves in it
-    with open("comp-170-su25-project/friends_database.csv", mode='w', encoding='utf-8') as file:
+    with open("comp-170-su25-project/friends_database.csv", mode='w') as file:
         
         for friend in friends:
        #strips uneed spaces form all the data that was write in but fills in blanks if data was not entered
