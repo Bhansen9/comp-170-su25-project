@@ -32,9 +32,10 @@ class Friend:
         self._birthday = Birthday(month, day)
 
     def full_name(self):
+        #simple function to print out a full name
         return f"{self.first_name} {self.last_name}"
     
-    
+
     def mailing_address(self):
         return f"{self.mailing}"
 
